@@ -226,6 +226,32 @@
         display: block;
       }
 
+      /* =========================================
+         TESTIMONIAL AVATAR FIXES
+         ========================================= */
+      .ts-avatar {
+        flex: 0 0 55px; /* Force strict width/height to prevent squishing */
+        width: 55px;
+        height: 55px;
+        min-width: 55px;
+        min-height: 55px;
+        border-radius: 50%;
+        overflow: hidden;
+        display: block;
+        border: 2px solid var(--neon, #22ff6e);
+        box-shadow: 0 0 10px rgba(34, 255, 110, 0.2);
+        background: #040f07; /* Fallback background */
+        align-self: center; /* Prevents vertical stretching from flexbox */
+      }
+      .ts-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Prevents image stretching */
+        object-position: center top; /* Focuses on the face */
+        display: block;
+        border-radius: 50%;
+      }
+
       @media (max-width: 768px) {
         .floating-chat-btn {
           bottom: 75px;
@@ -933,11 +959,13 @@
             <div class="ts-stars" aria-label="5 stars">
               <span class="ts-star">★</span><span class="ts-star">★</span><span class="ts-star">★</span><span class="ts-star">★</span><span class="ts-star">★</span>
             </div>
-            <p class="ts-text" data-km="សារឿន គឺជាបុគ្គលដែលមានការលះបង់យ៉ាងខ្លាំង។ ការយល់ដឹងស៊ីជម្រៅរបស់គាត់អំពីគណិតវិទ្យា និងចំណង់ចំណូលចិត្តក្នុងការចែករំលែកចំណេះដឹងធ្វើឱ្យគាត់ក្លាយជាអ្នកអប់រំដ៏ល្អម្នាក់។">
-              Ron is an incredibly dedicated individual. His deep understanding of mathematics and passion for sharing knowledge makes him an excellent educator.
+            <p class="ts-text" data-km="រស្មី គឺជាបុគ្គលដែលមានការលះបង់យ៉ាងខ្លាំង។ ការយល់ដឹងស៊ីជម្រៅរបស់គាត់អំពីគណិតវិទ្យា និងចំណង់ចំណូលចិត្តក្នុងការចែករំលែកចំណេះដឹងធ្វើឱ្យគាត់ក្លាយជាអ្នកអប់រំដ៏ល្អម្នាក់។">
+              Raksmey is an incredibly dedicated individual. His deep understanding of mathematics and passion for sharing knowledge makes him an excellent educator.
             </p>
             <div class="ts-footer">
-              <div class="ts-avatar ts-avatar-initials">RS</div>
+              <div class="ts-avatar">
+                <img src="image/ron.jpg" alt="Ron Saroeun" />
+              </div>
               <div>
                 <p class="ts-author" data-km="រុន សារឿន">Ron Saroeun</p>
                 <p class="ts-role" data-km="អ្នកអភិវឌ្ឍន៍វេបសាយ ធនាគារវីង">Web Developer, Wing Bank</p>
@@ -950,14 +978,16 @@
             <div class="ts-stars" aria-label="5 stars">
               <span class="ts-star">★</span><span class="ts-star">★</span><span class="ts-star">★</span><span class="ts-star">★</span><span class="ts-star">★</span>
             </div>
-            <p class="ts-text" data-km="ការធ្វើការជាមួយ សារឿន គឺជាបទពិសោធន៍ដ៏អស្ចារ្យ។ គាត់ជាអ្នកទំនាក់ទំនងដ៏ពូកែ និងតែងតែមានភាពអត់ធ្មត់នៅពេលពន្យល់ពីទស្សនាទានគណិតវិទ្យាស្មុគស្មាញដល់សិស្សរបស់គាត់។">
-              Working with Ron is a great experience. He is a strong communicator and always patient when explaining complex mathematical concepts to his students.
+            <p class="ts-text" data-km="រស្មី មានចំណង់ចំណូលចិត្តយ៉ាងជ្រាលជ្រៅចំពោះការបង្រៀន និងបច្ចេកវិទ្យា។ សមត្ថភាពរបស់គាត់ក្នុងការបញ្ចូលឧបករណ៍ឌីជីថលទៅក្នុងវិធីសាស្រ្តអប់រំរបស់គាត់គឺពិតជាគួរឱ្យស្ងើចសរសើរណាស់។">
+              Raksmey has a profound passion for teaching and technology. His ability to integrate digital tools into his educational approach is truly inspiring.
             </p>
             <div class="ts-footer">
-              <div class="ts-avatar ts-avatar-initials">SN</div>
+              <div class="ts-avatar">
+                <img src="image/kem.jpg" alt="Kem Deth" />
+              </div>
               <div>
-                <p class="ts-author" data-km="ងួន សុភា">Sophea Nguon</p>
-                <p class="ts-role" data-km="មិត្តរួមថ្នាក់ និងដៃគូគម្រោង">Classmate &amp; Project Partner</p>
+                <p class="ts-author" data-km="គឹម ដេត"><a href="https://kem-deth.netlify.app/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Kem Deth</a></p>
+                <p class="ts-role" data-km="អ្នកអភិវឌ្ឍន៍វេបសាយ">Web Developer</p>
               </div>
             </div>
           </div>
@@ -966,14 +996,16 @@
             <div class="ts-stars" aria-label="5 stars">
               <span class="ts-star">★</span><span class="ts-star">★</span><span class="ts-star">★</span><span class="ts-star">★</span><span class="ts-star">★</span>
             </div>
-            <p class="ts-text" data-km="សមត្ថភាពរបស់ សារឿន ក្នុងការរៀនសូត្ររហ័ស និងអនុវត្តឧបករណ៍គរុកោសល្យថ្មីៗដូចជា AI និង LaTeX គឺពិតជាគួរឱ្យចាប់អារម្មណ៍។ ផែនការមេរៀនរបស់គាត់តែងតែមានភាពច្បាស់លាស់ ងាយយល់ និងមានប្រសិទ្ធភាព។">
-              Ron's ability to quickly learn and implement new pedagogical tools like AI and LaTeX is impressive. His lesson plans are always clean, easy to follow, and effective.
+            <p class="ts-text" data-km="រស្មី គឺជាដៃគូសហការដ៏អស្ចារ្យ។ ក្នុងនាមខ្ញុំជាគណវគ្គ និងជាអ្នកបង្កើតកម្មវិធីគ្រប់គ្រងព័ត៌មានគរុនិស្សិតដោយប្រើ AI ព្រមទាំងភ្ជាប់ Excel ជាមួយ Website ខ្ញុំសូមកោតសរសើរនូវភាពច្នៃប្រឌិតរបស់គាត់ក្នុងការរួមបញ្ចូលបច្ចេកវិទ្យាទៅក្នុងការអប់រំ។">
+              Raksmey is a fantastic collaborator. As a Course Rep and developer of the AI-powered student management app integrating Excel with websites, I highly appreciate his creativity in blending technology with education.
             </p>
             <div class="ts-footer">
-              <div class="ts-avatar ts-avatar-initials">RP</div>
+              <div class="ts-avatar">
+                <img src="image/hum.jpg" alt="Hum Sanet" />
+              </div>
               <div>
-                <p class="ts-author" data-km="ពៅ រក្សា">Raksa Pov</p>
-                <p class="ts-role" data-km="ប្រធានក្រុមសិក្សា">Study Group Leader</p>
+                <p class="ts-author" data-km="ហ៊ុំ សាណេត">Hum Sanet</p>
+                <p class="ts-role" data-km="គណវគ្គ នៅវិទ្យាស្ថានគរុកោសល្យរាជធានីភ្នំពេញ">Course Representative, PTEC</p>
               </div>
             </div>
           </div>
@@ -1016,7 +1048,7 @@
                 <strong data-km="តេឡេក្រាម">Telegram</strong><span>@Ron_Raksmey</span>
               </div>
             </a>
-            <a href="https://www.facebook.com/share/1Yda6Rj3Jg/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="cl">
+            <a href="" target="_blank" rel="noopener noreferrer" class="cl">
               <div class="cl-ico">
                 <svg fill="var(--neon)" stroke="none"><use href="#ico-facebook" /></svg>
               </div>
@@ -1028,7 +1060,7 @@
               <div class="avail-dot" aria-hidden="true"></div>
               <div class="avail-text">
                 <strong data-km="បើកចំហរសម្រាប់ឱកាស">Open to Opportunities</strong>
-                <p data-km="តួនាទីបង្រៀន និងការអប់រំ។ រស់នៅរាជធានីភ្នំពេញ ប្រទេសកម្ពុជា។">
+                <p data-km="តួនាទីបង្រៀន និងការអប់រំ។ ទីលំនៅបច្ចុប្បន្នរាជធានីភ្នំពេញ។">
                   Teaching &amp; educational roles. Based in Phnom Penh, Cambodia.
                 </p>
               </div>
